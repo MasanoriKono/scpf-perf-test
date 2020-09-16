@@ -111,9 +111,10 @@ class BatterySensor(FastHttpUser):
 #        print(response.request.headers)
 #       print("{}".format(json_data))
 
+
 class CustomLoadTestShape(LoadTestShape):
     time_limit = 3600
-    spawn_rate = 20
+    spawn_rate = 200
     start_user = 1000
     stage_increment = 1000
     stage_duration = 300

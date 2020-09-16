@@ -3,10 +3,10 @@ kind: ConfigMap
 metadata:
   name: locust-param
 data:
-  VANTIQ_HOST: "<vantiq_host>"
-  ACCESS_TOKEN: "<access_token>"
+  VANTIQ_HOST: "https://oheksfuji8.longnameofdomaintest.tk"
+  ACCESS_TOKEN: "HLqpKULTMVV7lb3Vcuuhp4mEOpHHJoW6zRHvqDrIXv0="
   GITHUB_REPO_URL: "https://github.com/MasanoriKono/scpf-perf-test.git"
-  SCENARIO: "scenario-XX.py"
+  SCENARIO: "scpf-perf-scenario-3.py"
   MQTT_USERNAME: "<mqtt_username>"
   MQTT_PASSWORD: "<mqtt_password>"
   MQTT_ENDPOINT: "<mqtt_endpoint>"

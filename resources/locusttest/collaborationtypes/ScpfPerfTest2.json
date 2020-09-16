@@ -6,6 +6,7 @@
       "configuration" : {
         "associatedType" : "SensorDetails",
         "childStreams" : [ "join2" ],
+        "enableBadging" : true,
         "foreignKeys" : [ {
           "type" : "Property",
           "value" : "sensorId"
@@ -21,6 +22,7 @@
       "configuration" : {
         "associatedType" : "SensorDetails",
         "childStreams" : [ "join1" ],
+        "enableBadging" : true,
         "foreignKeys" : [ {
           "type" : "Property",
           "value" : "sensorId"
@@ -36,6 +38,7 @@
       "configuration" : {
         "associatedType" : "SensorDetails",
         "childStreams" : [ "join1" ],
+        "enableBadging" : true,
         "foreignKeys" : [ {
           "type" : "Property",
           "value" : "sensorId"
@@ -61,6 +64,7 @@
     "InputStream1" : {
       "configuration" : {
         "childStreams" : [ "InputRate", "TransformWind" ],
+        "enableBadging" : true,
         "inboundResource" : "topics",
         "inboundResourceId" : "/locust/scenario/1",
         "op" : null,
@@ -75,6 +79,7 @@
     "InputStream2" : {
       "configuration" : {
         "childStreams" : [ "InputRate", "TransformTemp" ],
+        "enableBadging" : true,
         "inboundResource" : "topics",
         "inboundResourceId" : "/locust/scenario/2",
         "op" : null,
@@ -89,6 +94,7 @@
     "InputStream3" : {
       "configuration" : {
         "childStreams" : [ "InputRate", "TransformBattery" ],
+        "enableBadging" : true,
         "inboundResource" : "topics",
         "inboundResourceId" : "/locust/scenario/3",
         "op" : null,
@@ -105,6 +111,7 @@
         "childStreams" : [ "TerminateSplit" ],
         "condition" : "event.battery < 20 && event.temperature < 0 && event.wind > 30",
         "duration" : "30 seconds",
+        "enableBadging" : true,
         "groupByWindow" : null,
         "outboundResource" : null,
         "outboundResourceId" : null,
@@ -136,6 +143,7 @@
     "SplitByID" : {
       "configuration" : {
         "childStreams" : [ "MonitorAnomaly" ],
+        "enableBadging" : true,
         "groupBy" : "event.machineId",
         "groupByWindow" : "60 seconds",
         "maxOpenGroups" : null
@@ -146,6 +154,7 @@
     "TerminateSplit" : {
       "configuration" : {
         "childStreams" : [ "Throughput" ],
+        "enableBadging" : true,
         "procedure" : "merge_stream",
         "schema" : null
       },
@@ -165,6 +174,7 @@
     "TransformBattery" : {
       "configuration" : {
         "childStreams" : [ "EnrichBattery" ],
+        "enableBadging" : true,
         "outboundResource" : null,
         "outboundResourceId" : null,
         "schema" : null,
@@ -198,6 +208,7 @@
     "TransformInputRate" : {
       "configuration" : {
         "childStreams" : [ "SaveRate" ],
+        "enableBadging" : true,
         "outboundResource" : null,
         "outboundResourceId" : null,
         "schema" : "LocustInput",
@@ -223,6 +234,7 @@
     "TransformJoin" : {
       "configuration" : {
         "childStreams" : [ "SplitByID" ],
+        "enableBadging" : true,
         "outboundResource" : null,
         "outboundResourceId" : null,
         "schema" : null,
@@ -256,6 +268,7 @@
     "TransformTemp" : {
       "configuration" : {
         "childStreams" : [ "EnrichTemp" ],
+        "enableBadging" : true,
         "outboundResource" : null,
         "outboundResourceId" : null,
         "schema" : null,
@@ -289,6 +302,7 @@
     "TransformThroughput" : {
       "configuration" : {
         "childStreams" : [ "SaveThroughput" ],
+        "enableBadging" : true,
         "outboundResource" : null,
         "outboundResourceId" : null,
         "schema" : "ThroughputRate",
@@ -314,6 +328,7 @@
     "TransformWind" : {
       "configuration" : {
         "childStreams" : [ "EnrichWind" ],
+        "enableBadging" : true,
         "outboundResource" : null,
         "outboundResourceId" : null,
         "schema" : null,
@@ -351,6 +366,7 @@
           "type" : "VAIL Expression",
           "value" : "EnrichWind.SensorDetails.machineId == EnrichTemp.SensorDetails.machineId"
         } ],
+        "enableBadging" : true,
         "order" : null,
         "outboundResource" : null,
         "outboundResourceId" : null,
@@ -367,6 +383,7 @@
           "type" : "VAIL Expression",
           "value" : "join1.EnrichWind.SensorDetails.machineId == EnrichBattery.SensorDetails.machineId"
         } ],
+        "enableBadging" : true,
         "order" : null,
         "outboundResource" : null,
         "outboundResourceId" : null,
