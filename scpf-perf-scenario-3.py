@@ -7,7 +7,7 @@ device_instance = {}  # keep the status of device instance
 
 # The instance of HttpUser can represent one sensor/device.
 class WindSensor(FastHttpUser):
-    wait_time = between(5, 10)
+    wait_time = between(1, 2)
 
     # instance of task can represent one type. (One device may send various data)
     @task
@@ -42,7 +42,7 @@ class WindSensor(FastHttpUser):
 
 
 class TemperatureSensor(FastHttpUser):
-    wait_time = between(5, 10)
+    wait_time = between(1, 2)
 
     # instance of task can represent one type. (One device may send various data)
     @task
@@ -74,7 +74,7 @@ class TemperatureSensor(FastHttpUser):
 
 
 class BatterySensor(FastHttpUser):
-    wait_time = between(5, 10)
+    wait_time = between(1, 2)
 
     # instance of task can represent one type. (One device may send various data)
     @task
@@ -114,8 +114,8 @@ class BatterySensor(FastHttpUser):
 class CustomLoadTestShape(LoadTestShape):
     time_limit = 3600
     spawn_rate = 100
-    start_user = 5000
-    stage_increment = 5000
+    start_user = 1000
+    stage_increment = 1000
     stage_duration = 300
     cool_down_duration = 60
 
