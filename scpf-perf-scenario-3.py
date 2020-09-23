@@ -114,8 +114,8 @@ class BatterySensor(FastHttpUser):
 class CustomLoadTestShape(LoadTestShape):
     time_limit = 3600
     spawn_rate = 100
-    start_user = 1000
-    stage_increment = 1000
+    start_user = 500
+    stage_increment = 200
     stage_duration = 300
     cool_down_duration = 60
 
