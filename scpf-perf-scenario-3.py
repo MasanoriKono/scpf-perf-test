@@ -116,8 +116,8 @@ class CustomLoadTestShape(LoadTestShape):
     spawn_rate = 100
     start_user = 500
     stage_increment = 200
-    stage_duration = 300
-    cool_down_duration = 60
+    stage_duration = 60
+    cool_down_duration = 0
 
     def tick(self):
 
