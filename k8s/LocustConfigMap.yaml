@@ -3,11 +3,13 @@ kind: ConfigMap
 metadata:
   name: locust-param
 data:
-  VANTIQ_HOST: "https://oheksfuji8.longnameofdomaintest.tk"
-  ACCESS_TOKEN: "HLqpKULTMVV7lb3Vcuuhp4mEOpHHJoW6zRHvqDrIXv0="
+  VANTIQ_HOST: "https://va01.kono-vantiq.tk"
+#  VANTIQ_HOST: "https://oheksfuji8.longnameofdomaintest.tk"
+  ACCESS_TOKEN: "BQsqlwjwy1tN6R5xuGDTo8G16xrIAN3lT8_09O2eoGU="
+#  ACCESS_TOKEN: "HLqpKULTMVV7lb3Vcuuhp4mEOpHHJoW6zRHvqDrIXv0="
   GITHUB_REPO_URL: "https://github.com/MasanoriKono/scpf-perf-test.git"
   SCENARIO: "scpf-perf-scenario-1.py"
   MQTT_USERNAME: "<mqtt_username>"
   MQTT_PASSWORD: "<mqtt_password>"
   MQTT_ENDPOINT: "<mqtt_endpoint>"
-  TEST_VERSION: "3"
+  TEST_VERSION: "4"
