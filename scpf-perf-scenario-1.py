@@ -115,10 +115,10 @@ class BatterySensor(FastHttpUser):
 class CustomLoadTestShape(LoadTestShape):
     time_limit = 3600
     spawn_rate = 200
-    start_user = 1000
-    stage_increment = 1000
+    start_user = 500
+    stage_increment = 500
     stage_duration = 120
-    cool_down_duration = 0
+    cool_down_duration = 60
 
     def tick(self):
 
