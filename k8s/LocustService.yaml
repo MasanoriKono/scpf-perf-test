@@ -3,12 +3,11 @@ kind: Service
 metadata:
   name: locust
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-    - name: "http-port"
-      protocol: "TCP"
-      port: 8080
-      targetPort: 8089
-      nodePort: 30089
+  - protocol: TCP
+    port: 80
+    targetPort: 8089
   selector:
+    statefulset.kubernetes.io/pod-name: locust-0
     app: locust
