@@ -118,7 +118,7 @@ class CustomLoadTestShape(LoadTestShape):
     time_limit = 3600
     spawn_rate = 20
     start_user = 1000
-    stage_increment = 500
+    stage_increment = 300
     stage_duration = 300
     cool_down_duration = 60
 
