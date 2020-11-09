@@ -129,7 +129,7 @@ class BatterySensor(FastHttpUser):
     #    cycle = int(run_time) // (self.stage_duration + self.cool_down_duration)
 
     #    if run_time % (self.stage_duration + self.cool_down_duration) < self.stage_duration:
-            user_count = self.start_user + cycle * self.stage_increment
+    #        user_count = self.start_user + cycle * self.stage_increment
     #    else:
     #        user_count = 0
 
